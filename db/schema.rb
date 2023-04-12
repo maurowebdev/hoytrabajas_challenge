@@ -10,9 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_04_12_200422) do
+ActiveRecord::Schema[7.0].define(version: 2023_04_13_154925) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "bank_accounts", force: :cascade do |t|
+    t.string "number"
+    t.bigint "bank_id", null: false
+    t.bigint "provider_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["bank_id"], name: "index_bank_accounts_on_bank_id"
+    t.index ["provider_id"], name: "index_bank_accounts_on_provider_id"
+  end
 
   create_table "banks", force: :cascade do |t|
     t.string "name", null: false
@@ -20,4 +30,16 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_12_200422) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "providers", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "national_id_type", default: "nit", null: false
+    t.string "national_id_number", null: false
+    t.string "contact_name", null: false
+    t.string "contact_phone_number"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_foreign_key "bank_accounts", "banks"
+  add_foreign_key "bank_accounts", "providers"
 end

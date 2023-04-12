@@ -1,0 +1,42 @@
+<div id="<%= dom_id provider %>">
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Name:</strong>
+    <%= provider.name %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">National id type:</strong>
+    <%= provider.national_id_type %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">National id number:</strong>
+    <%= provider.national_id_number %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Contact name:</strong>
+    <%= provider.contact_name %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Contact phone number:</strong>
+    <%= provider.contact_phone_number %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Bank:</strong>
+    <%= provider.bank_name %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Bank account number:</strong>
+    <%= provider.bank_account_number %>
+  </p>
+
+  <% if action_name != "show" %>
+    <%= link_to "Show this provider", provider, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to 'Edit this provider', edit_provider_path(provider), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    <hr class="mt-6">
+  <% end %>
+</div>
