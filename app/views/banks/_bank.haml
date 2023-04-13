@@ -1,0 +1,9 @@
+%div{ id: "#{dom_id bank}" }
+  %p.my-5
+    %strong.block.font-medium.mb-1= t('bank.name')
+    = bank.name
+
+  - if action_name != "show"
+    = link_to t('show'), bank, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium"
+    = link_to t('edit'), edit_bank_path(bank), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium"
+    %hr.mt-6

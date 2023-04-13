@@ -1,0 +1,89 @@
+es:
+  provider_title: Proveedores
+  new_provider: Nuevo proveedor
+  show: Ver
+  edit: Editar
+  destroy: Eliminar
+  back: Atrás
+  error: Error
+  provider:
+    index: Todos los proveedores
+    name: Nombre
+    national_id_type: Tipo de identificación
+    national_id_number: Número de identificación
+    contact_name: Nombre de contacto
+    contact_phone_number: Teléfono de contacto
+    bank: Banco
+    bank_account_number: Número de cuenta bancaria
+    create:
+      success: Proveedor creado exitósamente
+    update:
+      success: Proveedor actualizado exitósamente
+    destroy:
+      success: Proveedor eliminado!
+      confirm: Desea borrar este proveedor?
+  banks_title: Bancos
+  bank:
+    index: Todos los bancos
+    edit: Actualizar información de banco
+    new: Nuevo banco
+    name: Nombre
+    error_messages_suffix: en la información suministrada
+    create:
+      success: Banco creado exitósamente
+    update:
+      success: Banco actualizado exitósamente
+    destroy:
+      success: Banco eliminado!
+  helpers:
+    label:
+      bank:
+        name: Nombre del banco
+      provider:
+        name: Nombre del proveedor
+        national_id_type: Tipo de identificación
+        national_id_number: Número de identificación
+        contact_name: Nombre de contacto
+        contact_phone_number: Teléfono de contacto
+      bank_account:
+        bank_id: Banco
+        bank_account_number: Número de cuenta bancaria
+    submit:
+      create: "Crear %{model}"
+      update: "Modificar %{model}"
+
+  activerecord:
+    models:
+      bank: Banco
+      provider: Proveedor
+      bank_account: Cuenta bancaria
+    errors:
+      models:
+        bank:
+          attributes:
+            name:
+              too_short: Nombre de banco muy corto (mín. 3 dígitos)
+              too_long: Número de banco muy largo (máx. 50 dígitos)
+        bank_account:
+          attributes:
+            bank:
+              required: Escoja un banco válido
+              blank: Banco no puede estar en blanco
+            number:
+              too_short: Número de cuenta bancaria muy corto (mín. 10 dígitos)
+              too_long: Número de cuenta bancaria muy largo (máx. 15 dígitos)
+        provider:
+          attributes:
+            bank_account:
+              invalid: Información bancaria no es válida
+            national_id_number:
+              invalid: Número de identificación no es válido
+              blank: Número de identificación no puede estar en blanco
+            name:
+              blank: Nombre de proveedor no puede estar en blanco
+            contact_name:
+              blank: Nombre de contacto no puede estar en blanco
+            contact_phone_number:
+              too_short: Número de teléfono muy corto (mín. 7 dígitos)
+              too_long: Número de teléfono muy largo (máx. 10 dígitos)
+

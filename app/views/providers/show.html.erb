@@ -6,10 +6,8 @@
 
     <%= render @provider %>
 
-    <%= link_to 'Edit this provider', edit_provider_path(@provider), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
-    <div class="inline-block ml-2">
-      <%= button_to 'Destroy this provider', provider_path(@provider), method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium" %>
-    </div>
-    <%= link_to 'Back to providers', providers_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to t('edit'), edit_provider_path(@provider), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= button_to t('destroy'), provider_path(provider), form: { data: { turbo_confirm: t('provider.destroy.confirm') } }, method: :delete, class: 'mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium' %>
+    <%= link_to t('provider.index'), providers_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
   </div>
 </div>

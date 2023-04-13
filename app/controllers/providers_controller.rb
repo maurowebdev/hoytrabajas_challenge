@@ -1,5 +1,5 @@
 class ProvidersController < ApplicationController
-  before_action :set_provider, only: %i[ show edit update destroy ]
+  before_action :set_provider, only: %i[show edit update destroy]
 
   # GET /providers
   def index
@@ -25,7 +25,7 @@ class ProvidersController < ApplicationController
     @provider = Provider.new(provider_params)
 
     if @provider.save
-      redirect_to @provider, notice: "Provider was successfully created."
+      redirect_to @provider, notice: t('provider.create.success')
     else
       render :new, status: :unprocessable_entity
     end
@@ -34,7 +34,7 @@ class ProvidersController < ApplicationController
   # PATCH/PUT /providers/1
   def update
     if @provider.update(provider_params)
-      redirect_to @provider, notice: "Provider was successfully updated."
+      redirect_to @provider, notice: t('provider.update.success')
     else
       render :edit, status: :unprocessable_entity
     end
@@ -43,7 +43,7 @@ class ProvidersController < ApplicationController
   # DELETE /providers/1
   def destroy
     @provider.destroy
-    redirect_to providers_url, notice: "Provider was successfully destroyed."
+    redirect_to providers_url, notice: t('provider.destroy.success')
   end
 
   private

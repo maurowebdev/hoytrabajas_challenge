@@ -1,0 +1,33 @@
+%div{id: "#{dom_id provider}"}
+  %p.my-5
+    %strong.block.font-medium.mb-1= t('provider.name')
+    = link_to provider.name, provider, class: 'rounded-lg px-5 inline-block font-medium'
+
+  %p.my-5
+    %strong.block.font-medium.mb-1= t('provider.national_id_type')
+    = provider.national_id_type
+
+  %p.my-5
+    %strong.block.font-medium.mb-1= t('provider.national_id_number')
+    = provider.national_id_number
+
+  %p.my-5
+    %strong.block.font-medium.mb-1= t('provider.contact_name')
+    = provider.contact_name
+
+  %p.my-5
+    %strong.block.font-medium.mb-1= t('provider.contact_phone_number')
+    = provider.contact_phone_number
+
+  %p.my-5
+    %strong.block.font-medium.mb-1= t('provider.bank')
+    = provider.bank_name
+
+  %p.my-5
+    %strong.block.font-medium.mb-1= t('provider.bank_account_number')
+    = provider.bank_account_number
+
+  - if action_name != 'show'
+    = link_to t('edit'), edit_provider_path(provider), class: 'rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium'
+    = button_to t('destroy'), provider_path(provider), form: { data: { turbo_confirm: t('provider.destroy.confirm') } }, method: :delete, class: 'mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium'
+    %br.mt-6

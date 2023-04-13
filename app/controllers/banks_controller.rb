@@ -19,7 +19,7 @@ class BanksController < ApplicationController
     @bank = Bank.new(bank_params)
 
     if @bank.save
-      redirect_to @bank, notice: 'Bank was successfully created.'
+      redirect_to @bank, notice: t('bank.create.success')
     else
       render :new, status: :unprocessable_entity
     end
@@ -27,7 +27,7 @@ class BanksController < ApplicationController
 
   def update
     if @bank.update(bank_params)
-      redirect_to @bank, notice: 'Bank was successfully updated.'
+      redirect_to @bank, notice: t('bank.update.success')
     else
       render :edit, status: :unprocessable_entity
     end
@@ -35,7 +35,7 @@ class BanksController < ApplicationController
 
   def destroy
     @bank.destroy
-    redirect_to banks_url, notice: 'Bank was successfully destroyed.'
+    redirect_to banks_url, notice: t('bank.destroy.success')
   end
 
   private
