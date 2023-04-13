@@ -2,3 +2,6 @@ Style/Documentation:
   Enabled: false
 Metrics/BlockLength:
   Enabled: false
+AllCops:
+  Excludes:
+    - db/schema.rb

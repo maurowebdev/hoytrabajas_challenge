@@ -1,4 +1,66 @@
 es:
+  date:
+    abbr_day_names:
+    - dom
+    - lun
+    - mar
+    - mié
+    - jue
+    - vie
+    - sáb
+    abbr_month_names:
+    -
+    - ene
+    - feb
+    - mar
+    - abr
+    - may
+    - jun
+    - jul
+    - ago
+    - sep
+    - oct
+    - nov
+    - dic
+    day_names:
+    - domingo
+    - lunes
+    - martes
+    - miércoles
+    - jueves
+    - viernes
+    - sábado
+    formats:
+      default: "%d/%m/%Y"
+      long: "%d de %B de %Y"
+      short: "%d de %b"
+    month_names:
+    -
+    - enero
+    - febrero
+    - marzo
+    - abril
+    - mayo
+    - junio
+    - julio
+    - agosto
+    - septiembre
+    - octubre
+    - noviembre
+    - diciembre
+  time:
+    formats:
+      short: "%d de %B %Y"
+      long: "%d de %B de %Y %H:%M"
+  admin:
+    welcome: Bienvenido, Administrador
+    dashboard: Dashboard
+    dashboard_subtle: Vista general
+    settings: Configuración
+    bank_accounts: Bancos
+    last_24h_statistics: Data últimas 24h
+    last_24h_incomes: Pagos últimas 24h
+
   provider_title: Proveedores
   new_provider: Nuevo proveedor
   show: Ver
@@ -7,6 +69,7 @@ es:
   back: Atrás
   error: Error
   provider:
+    manage: Administrar proveedores
     index: Todos los proveedores
     name: Nombre
     national_id_type: Tipo de identificación
@@ -35,6 +98,8 @@ es:
       success: Banco actualizado exitósamente
     destroy:
       success: Banco eliminado!
+  bank_account:
+    manage: Administrar cuentas
   helpers:
     label:
       bank:
@@ -86,4 +151,3 @@ es:
             contact_phone_number:
               too_short: Número de teléfono muy corto (mín. 7 dígitos)
               too_long: Número de teléfono muy largo (máx. 10 dígitos)
-
