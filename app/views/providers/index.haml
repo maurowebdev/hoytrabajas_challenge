@@ -8,6 +8,7 @@
     = link_to t('new_provider'), new_provider_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium"
   #providers.min-w-full
     = render 'providers'
+  .antialiased.bg-black.w-full.text-slate-300.relative.py-10.px-40
     = pagy_nav(@pagy).html_safe
   %br
   .flex.justify-between.items-center

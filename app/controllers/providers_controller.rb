@@ -1,5 +1,8 @@
+# frozen_string_literal: true
+
 class ProvidersController < ApplicationController
   before_action :set_provider, only: %i[show edit update destroy]
+  before_action :ensure_logged_in
 
   # GET /providers
   def index
@@ -7,8 +10,7 @@ class ProvidersController < ApplicationController
   end
 
   # GET /providers/1
-  def show
-  end
+  def show; end
 
   # GET /providers/new
   def new
@@ -19,8 +21,7 @@ class ProvidersController < ApplicationController
   end
 
   # GET /providers/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /providers
   def create
@@ -45,7 +46,8 @@ class ProvidersController < ApplicationController
   # DELETE /providers/1
   def destroy
     @provider.destroy
-    redirect_to providers_url, notice: t('provider.destroy.success')
+
+    redirect_to root_url, notice: t('provider.destroy.success')
   end
 
   private

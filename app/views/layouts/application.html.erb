@@ -12,7 +12,20 @@
   </head>
 
   <body>
-    <main class="container mx-auto mt-28 px-5 flex">
+    <main>
+      <%= render 'layouts/app_navbar' %>
+      <% if flash[:notice] %>
+      <div class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" role="alert">
+        <%= flash[:notice] %>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+      <% end %>
+      <% if flash[:alert] %>
+        <div class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3" role="alert">
+          <%= flash[:alert] %>
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+      <% end %>
       <%= yield %>
     </main>
   </body>

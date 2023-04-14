@@ -61,12 +61,31 @@ es:
     last_24h_statistics: Data últimas 24h
     last_24h_incomes: Pagos últimas 24h
   provider_title: Proveedores
+  sign_up: Registrarse
+  sign_in: Ingresar
+  log_out: Cerrar sesión
+  must_sign_in: Debe iniciar sesión para continuar
+  forgot_password: Olvidé mi contraseña
+  send_reset_password_instructions: Enviar enlace para restablecer contraseña
   new_provider: Nuevo proveedor
   show: Ver
   edit: Editar
   destroy: Eliminar
   back: Atrás
+  devise:
+    registrations:
+      user:
+        signed_up: Ha ingresado correctamente
+    failure:
+      user:
+        invalid: Las credenciales no son válidas. Intente de nuevo
+        already_authenticated: El usuario ya inició sesión
+        unauthenticated: Debe iniciar sesión
+        not_found_in_database: Usuario no encontrado en el sistema. Revise las credenciales e intente de nuevo
   error: Error
+  errors:
+    messages:
+      not_saved: No se pudo guardar
   provider:
     actions: Opciones
     empty_banks: Debe crear un banco primero
@@ -116,6 +135,13 @@ es:
       bank_account:
         bank_id: Banco
         bank_account_number: Número de cuenta bancaria
+      registration:
+        email: Email
+        password: Contraseña
+        min_password: caracteres mínimo
+        password_confirmation: Confirmar contraseña
+      session:
+        remember_me: Recuérdame
     submit:
       create: "Crear %{model}"
       update: "Modificar %{model}"
@@ -127,6 +153,15 @@ es:
       bank_account: Cuenta bancaria
     errors:
       models:
+        user:
+          attributes:
+            email:
+              blank: Email no puede estar en blanco
+              invalid: Email no es válido
+              taken: Email ya está en uso
+            password:
+              blank: Introduzca una contraseña válida
+              too_short: La contraseña es demasiado corta
         bank:
           attributes:
             name:

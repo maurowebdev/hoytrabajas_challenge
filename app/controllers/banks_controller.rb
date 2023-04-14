@@ -2,6 +2,7 @@
 
 class BanksController < ApplicationController
   before_action :set_bank, only: %i[show edit update destroy]
+  before_action :ensure_logged_in
 
   def index
     @banks = Bank.all
