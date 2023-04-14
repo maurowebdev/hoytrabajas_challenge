@@ -9,6 +9,8 @@
 
   #banks.min-w-full
     = render 'banks'
+  .antialiased.bg-black.w-full.text-slate-300.relative.py-10.px-40
+    = pagy_nav(@pagy).html_safe
   %br
   .flex.justify-between.items-center
     = link_to t('admin.dashboard_subtle'), admin_index_path, class: 'rounded-lg py-3 bg-neutral-800 m-auto px-5 inline-block font-medium'

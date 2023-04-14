@@ -14,8 +14,8 @@ class Provider < ApplicationRecord
 
   enum national_id_type: ID_TYPES
 
-  delegate :name, to: :bank, prefix: true
-  delegate :number, to: :bank_account, prefix: true
+  delegate :name, to: :bank, prefix: true, allow_nil: true
+  delegate :number, to: :bank_account, prefix: true, allow_nil: true
 
   validates :national_id_number, format: { with: NIT_REGEX }
   validates :national_id_type, inclusion: { in: ID_TYPES.values }

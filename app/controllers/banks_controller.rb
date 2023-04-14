@@ -5,7 +5,7 @@ class BanksController < ApplicationController
   before_action :ensure_logged_in
 
   def index
-    @banks = Bank.all
+    @pagy, @banks = pagy(Bank.all.order(created_at: :desc), items: 10)
   end
 
   def show; end

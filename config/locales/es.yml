@@ -86,7 +86,7 @@ es:
   error: Error
   errors:
     messages:
-      not_saved: No se pudo guardar
+      not_saved: No se pudo completar el registro
   provider:
     actions: Opciones
     empty_banks: Debe crear un banco primero
@@ -163,11 +163,13 @@ es:
             password:
               blank: Introduzca una contraseña válida
               too_short: La contraseña es demasiado corta
+            password_confirmation:
+              confirmation: Confirme la contraseña
         bank:
           attributes:
             name:
               too_short: Nombre de banco muy corto (mín. 3 dígitos)
-              too_long: Número de banco muy largo (máx. 50 dígitos)
+              too_long: Nombre de banco muy largo (máx. 50 dígitos)
         bank_account:
           attributes:
             bank:
