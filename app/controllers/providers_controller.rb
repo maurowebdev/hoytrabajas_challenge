@@ -12,6 +12,8 @@ class ProvidersController < ApplicationController
 
   # GET /providers/new
   def new
+    redirect_to banks_path, notice: t('provider.empty_banks') if Bank.all.empty?
+
     @provider = Provider.new
     @provider.build_bank_account
   end

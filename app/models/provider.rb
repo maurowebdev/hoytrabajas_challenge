@@ -6,7 +6,7 @@ class Provider < ApplicationRecord
   public_constant :NIT_REGEX
   private_constant :ID_TYPES
 
-  has_one :bank_account, inverse_of: :provider, dependent: :destroy
+  has_one :bank_account, inverse_of: :provider
   accepts_nested_attributes_for :bank_account
   validates_associated :bank_account
 

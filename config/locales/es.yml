@@ -69,8 +69,10 @@ es:
   error: Error
   provider:
     actions: Opciones
+    empty_banks: Debe crear un banco primero
     manage: Administrar proveedores
     index: Todos los proveedores
+    editing: Actualizar proveedor
     name: Nombre
     national_id_type: Tipo de identificación
     national_id_number: Número de identificación

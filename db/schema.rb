@@ -41,5 +41,5 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_13_154925) do
   end
 
   add_foreign_key "bank_accounts", "banks"
-  add_foreign_key "bank_accounts", "providers"
+  add_foreign_key "bank_accounts", "providers", on_delete: :cascade
 end

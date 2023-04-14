@@ -7,7 +7,7 @@
 
       %ul
         - bank.errors.each do |error|
-          %li= error.full_message
+          %li= error.message
 
   .my-5
     = form.label :name

@@ -3,7 +3,7 @@
 FactoryBot.define do
   factory :bank_account do
     association :bank
-    number { '1234567890' }
+    number { Faker::Bank.account_number(digits: 10) }
     provider { nil }
   end
 end
