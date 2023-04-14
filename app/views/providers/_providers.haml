@@ -3,4 +3,4 @@
   %table.w-full.whitespace-nowrap
     = render 'provider_table_header'
     - @providers.each do |provider|
-      = render 'provider_row', provider: provider
+      = render 'provider_row', provider: provider, provider_data: rough_translate_blanks(provider)

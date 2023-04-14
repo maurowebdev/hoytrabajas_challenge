@@ -3,6 +3,18 @@
 module ProvidersHelper
   include Pagy::Frontend
 
+  def rough_translate_blanks(provider)
+    blank_text = t('no_data')
+
+    OpenStruct.new(
+      name: provider.name,
+      contact_name: provider.contact_name,
+      contact_phone_number: provider.contact_phone_number.presence || blank_text,
+      bank_name: provider.bank_name,
+      bank_account_number: provider.bank_account_number.presence || blank_text
+    )
+  end
+
   def edit_action(provider)
     link_to edit_provider_path(provider), class: 'hover text-white' do
       "<svg class='w-5 h-5' fill='none' stroke='currentColor' stroke-width='1.5' viewbox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>

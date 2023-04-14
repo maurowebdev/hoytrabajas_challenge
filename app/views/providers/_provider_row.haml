@@ -3,11 +3,11 @@
     .inline-flex.space-x-3.items-center
       %span
         %img.rounded-full.w-8.h-8{:alt => "", :src => "https://images.generated.photos/tGiLEDiAbS6NdHAXAjCfpKoW05x2nq70NGmxjxzT5aU/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/OTM4ODM1LmpwZw.jpg"}/
-      %span= link_to provider.name, provider_path(provider)
-  %td.py-3.px-2= provider.contact_name
-  %td.py-3.px-2= provider.contact_phone_number
-  %td.py-3.px-2= provider.bank_name
-  %td.py-3.px-2= provider.bank_account_number
+      %span= link_to provider_data.name, provider_path(provider)
+  %td.py-3.px-2= provider_data.contact_name
+  %td.py-3.px-2= provider_data.contact_phone_number
+  %td.py-3.px-2= provider_data.bank_name
+  %td.py-3.px-2= provider_data.bank_account_number
   %td.py-3.px-2
     = edit_action(provider)
     = destroy_action(provider)
