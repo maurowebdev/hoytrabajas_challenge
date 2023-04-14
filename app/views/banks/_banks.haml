@@ -1,0 +1,6 @@
+%br
+.overflow-x-scroll
+  %table.w-full.whitespace-nowrap
+    = render 'bank_table_header'
+    - @banks.each do |bank|
+      = render 'bank_row', bank: bank

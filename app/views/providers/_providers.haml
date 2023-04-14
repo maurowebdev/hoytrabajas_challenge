@@ -1,0 +1,6 @@
+%br
+.overflow-x-scroll
+  %table.w-full.whitespace-nowrap
+    = render 'provider_table_header'
+    - @providers.each do |provider|
+      = render 'provider_row', provider: provider

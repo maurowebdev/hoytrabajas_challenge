@@ -60,7 +60,6 @@ es:
     bank_accounts: Bancos
     last_24h_statistics: Data últimas 24h
     last_24h_incomes: Pagos últimas 24h
-
   provider_title: Proveedores
   new_provider: Nuevo proveedor
   show: Ver
@@ -69,6 +68,7 @@ es:
   back: Atrás
   error: Error
   provider:
+    actions: Opciones
     manage: Administrar proveedores
     index: Todos los proveedores
     name: Nombre
@@ -98,6 +98,7 @@ es:
       success: Banco actualizado exitósamente
     destroy:
       success: Banco eliminado!
+      confirm: Desea borrar este banco?
   bank_account:
     manage: Administrar cuentas
   helpers:
