@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 module ProvidersHelper
+  include Pagy::Frontend
+
   def edit_action(provider)
     link_to edit_provider_path(provider), class: 'hover text-white' do
       "<svg class='w-5 h-5' fill='none' stroke='currentColor' stroke-width='1.5' viewbox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>

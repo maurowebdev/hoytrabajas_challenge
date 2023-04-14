@@ -3,7 +3,7 @@ class ProvidersController < ApplicationController
 
   # GET /providers
   def index
-    @providers = Provider.all
+    @pagy, @providers = pagy(Provider.includes(bank_account: :bank), items: 10)
   end
 
   # GET /providers/1
